@@ -4,43 +4,6 @@ import {
   DELETE_ALL_EVENTS
 } from '../actions'
 
-//action = {
-//   type: 'CREATE_EVENT'
-//   title: '2020東京オリンピックのお知らせ',
-//   bovy: '2020年に東京オリンピックを開催します！つきましては、、、、、',
-// }
-
-// #before
-// state = []
-
-// #after
-// staate = [
-//   {
-//     type: 'CREATE_EVENT'
-//     title: '2020東京オリンピックのお知らせ',
-//     bovy: '2020年に東京オリンピックを開催します！つきましては、、、、、',
-//   }
-// ]
-
-// #before
-// state = [
-//   {id: 1, title: 'タイトル1', body: 'ボディー１'},
-//   {id: 2, title: 'タイトル2', body: 'ボディー2'},
-//   {id: 3, title: 'タイトル3', body: 'ボディー3'},
-// ]
-
-// #after
-// state = [
-//   {id: 1, title: 'タイトル1', body: 'ボディー１'},
-//   {id: 2, title: 'タイトル2', body: 'ボディー2'},
-//   {id: 3, title: 'タイトル3', body: 'ボディー3'},
-//   {
-//     id: 4,
-//     title: '2020東京オリンピックのお知らせ',
-//     bovy: '2020年に東京オリンピックを開催します！つきましては、、、、、',
-//   },
-// ]
-
 const events = (state = [], action) => {
   switch(action.type){
     case CREATE_EVENT:
@@ -52,7 +15,7 @@ const events = (state = [], action) => {
       return state.filter(event => event.id !== action.id)
     case DELETE_ALL_EVENTS:
       return []
-    default:
+    default: 
       return state
   }
 }
