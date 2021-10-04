@@ -5,5 +5,5 @@ import operationLogs from './operationLogs'
 
 export default combineReducers({
   events,
-  operationLogs,
+  operationLogs
 })
